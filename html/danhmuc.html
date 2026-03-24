@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Khám phá danh mục các loại cây thuốc Nam quý giá, được phân loại theo công dụng: trị ho, trị cảm, trị đau bụng và nhiều hơn nữa."
+    />
+    <title>Danh Mục Cây Thuốc - Cây Thuốc Nam</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      /* CSS riêng cho trang danh mục */
+      .category-filter {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        padding: 10px 25px;
+        border-radius: 30px;
+        background: #f0f0f0;
+        color: var(--text-color);
+        cursor: pointer;
+        transition: var(--transition);
+        font-weight: 500;
+        border: 2px solid transparent;
+      }
+
+      .filter-btn:hover {
+        background: var(--primary-light);
+        color: white;
+      }
+
+      /* Logic lọc bằng Radio Hack */
+      #filter-all:checked ~ .category-filter label[for="filter-all"],
+      #filter-ho:checked ~ .category-filter label[for="filter-ho"],
+      #filter-cam:checked ~ .category-filter label[for="filter-cam"],
+      #filter-bung:checked ~ .category-filter label[for="filter-bung"] {
+        background: var(--primary-color);
+        color: white;
+        border-color: var(--primary-dark);
+      }
+
+      .herb-grid .herb-card {
+        display: block;
+        animation: fadeIn 0.5s ease forwards;
+      }
+
+      /* Ẩn các card không thuộc category được chọn */
+      #filter-ho:checked ~ .herb-grid .herb-card:not(.cat-ho),
+      #filter-cam:checked ~ .herb-grid .herb-card:not(.cat-cam),
+      #filter-bung:checked ~ .herb-grid .herb-card:not(.cat-bung) {
+        display: none;
+      }
+
+      .category-section-title {
+        position: relative;
+        padding-left: 20px;
+        margin: 60px 0 30px;
+        color: var(--primary-dark);
+        font-size: 1.8rem;
+      }
+
+      .category-section-title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 5px;
+        height: 80%;
+        background: var(--accent-color);
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header & Navigation (Pure CSS) -->
+    <input type="checkbox" id="menu-toggle-cb" style="display: none" />
+    <header class="header">
+      <div class="container header-container">
+        <div class="logo">
+          <a href="../index.html">
+            <h1><i class="fa-solid fa-leaf"></i> Cây Thuốc Nam</h1>
+          </a>
+        </div>
+
+        <div class="search-box desktop-search">
+          <input type="text" placeholder="Tìm kiếm cây thuốc..." />
+          <button><i class="fa-solid fa-search"></i></button>
+        </div>
+
+        <label for="menu-toggle-cb" class="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
+
+        <nav class="nav">
+          <ul>
+            <li><a href="../index.html">Trang chủ</a></li>
+            <li><a href="gioithieu.html">Giới thiệu</a></li>
+            <li class="dropdown">
+              <a href="danhmuc.html" style="color: var(--primary-color)"
+                >Danh mục cây thuốc <i class="fa-solid fa-chevron-down"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li><a href="danhmuc.html#tri-ho">Cây thuốc trị ho</a></li>
+                <li><a href="danhmuc.html#tri-cam">Cây thuốc trị cảm</a></li>
+                <li>
+                  <a href="danhmuc.html#tri-dau-bung">Cây thuốc trị đau bụng</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="lienhe.html">Liên hệ</a></li>
+          </ul>
+        </nav>
+
+        <label for="menu-toggle-cb" class="menu-overlay"></label>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="about-hero"
+      style="
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url(&quot;../images/banner1.png&quot;);
+        background-size: cover;
+        background-position: center;
+        padding: 80px 20px;
+        text-align: center;
+        color: white;
+      "
+    >
+      <div class="container">
+        <h2 style="font-size: 3rem; margin-bottom: 15px">Thư Viện Thảo Dược</h2>
+        <p style="font-size: 1.2rem; opacity: 0.9">
+          Tra cứu thông tin chi tiết về các loại cây thuốc Nam quanh ta
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container section-padding">
+      <!-- Radio Buttons cho Filter (Hidden) -->
+      <input
+        type="radio"
+        name="herb-filter"
+        id="filter-all"
+        checked
+        style="display: none"
+      />
+      <input
+        type="radio"
+        name="herb-filter"
+        id="filter-ho"
+        style="display: none"
+      />
+      <input
+        type="radio"
+        name="herb-filter"
+        id="filter-cam"
+        style="display: none"
+      />
+      <input
+        type="radio"
+        name="herb-filter"
+        id="filter-bung"
+        style="display: none"
+      />
+
+      <div class="category-filter">
+        <label for="filter-all" class="filter-btn">Tất cả</label>
+        <label for="filter-ho" class="filter-btn">Trị Ho</label>
+        <label for="filter-cam" class="filter-btn">Trị Cảm</label>
+        <label for="filter-bung" class="filter-btn">Trị Đau Bụng</label>
+      </div>
+
+      <div class="herb-grid">
+        <div class="herb-card cat-cam">
+          <div class="herb-img">
+            <img src="../images/hinh3.png" alt="Cây Tía Tô" />
+          </div>
+          <div class="herb-info">
+            <h3>Cây Tía Tô</h3>
+            <span class="tag">Trị Cảm</span>
+            <p>Giải cảm, ra mồ hôi, tiêu đờm, hỗ trợ an thai rất tốt.</p>
+            <a href="chitiet.html" class="btn-outline">Xem chi tiết</a>
+          </div>
+        </div>
+
+        <!-- Nhóm Trị Ho -->
+        <div class="herb-card cat-ho">
+          <div class="herb-img">
+            <img src="../images/hinh2.png" alt="Cây Bạc Hà" />
+          </div>
+          <div class="herb-info">
+            <h3>Cây Bạc Hà</h3>
+            <span class="tag">Trị Ho</span>
+            <p>Làm sạch đường hô hấp, giảm đau họng và thông mũi mát lạnh.</p>
+            <a href="bacha.html" class="btn-outline">Xem chi tiết</a>
+          </div>
+        </div>
+
+        <!-- Nhóm Trị Đau Bụng -->
+        <div class="herb-card cat-bung">
+          <div class="herb-img">
+            <img src="../images/hinh5.png" alt="Củ Gừng" />
+          </div>
+          <div class="herb-info">
+            <h3>Gừng Tươi</h3>
+            <span class="tag">Trị Đau Bụng</span>
+            <p>Ấm bụng, giảm nôn trớ, hỗ trợ tiêu hóa cực kỳ hiệu quả.</p>
+            <a href="gung.html" class="btn-outline">Xem chi tiết</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="container footer-content">
+        <div class="footer-col">
+          <h3>Về Chúng Tôi</h3>
+          <p>
+            Cung cấp kiến thức về cách sống khỏe mạnh thông qua Y Học Cổ Truyền
+            và Cây Thuốc Nam.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Thông Tin Liên Hệ</h3>
+          <p><i class="fa-solid fa-location-dot"></i> TPHCM, Việt Nam</p>
+          <p><i class="fa-solid fa-phone"></i> 1800 1568</p>
+          <p><i class="fa-solid fa-envelope"></i> contact@thuocnam.vn</p>
+        </div>
+        <div class="footer-col">
+          <h3>Cộng đồng</h3>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 Cây Thuốc Nam. Bản quyền thuộc về cộng đồng Thảo Dược
+          Việt.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

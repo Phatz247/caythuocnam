@@ -1,177 +1,288 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Website giới thiệu các loại Cây thuốc Nam đa dạng: trị ho, đau bụng, cảm cúm. Giúp chữa bệnh hiệu quả từ thiên nhiên.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Website giới thiệu các loại Cây thuốc Nam đa dạng: trị ho, đau bụng, cảm cúm. Giúp chữa bệnh hiệu quả từ thiên nhiên."
+    />
     <title>Cây Thuốc Nam - Thảo Dược Sức Khỏe</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-    <!-- Header & Navigation (Pure CSS Mobile Menu) -->
-    <input type="checkbox" id="menu-toggle-cb" style="display: none;">
+  <body>
+    <input type="checkbox" id="menu-toggle-cb" style="display: none" />
     <header class="header">
-        <div class="container header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <h1><i class="fa-solid fa-leaf"></i> Cây Thuốc Nam</h1>
-                </a>
-            </div>
-
-            <div class="search-box desktop-search">
-                <input type="text" placeholder="Tìm kiếm cây thuốc...">
-                <button><i class="fa-solid fa-search"></i></button>
-            </div>
-
-            <!-- Hamburger Icon (Label cho Checkbox) -->
-            <label for="menu-toggle-cb" class="menu-toggle" id="mobile-menu-label">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </label>
-
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html" style="color:var(--primary-color)">Trang chủ</a></li>
-                    <li><a href="html/gioithieu.html">Giới thiệu</a></li>
-                    <li class="dropdown">
-                        <a href="#categories">Danh mục cây thuốc <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#tri-ho">Cây thuốc trị ho</a></li>
-                            <li><a href="#tri-cam">Cây thuốc trị cảm</a></li>
-                            <li><a href="#tri-dau-bung">Cây thuốc trị đau bụng</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="html/lienhe.html">Liên hệ</a></li>
-                </ul>
-            </nav>
-
-            <label for="menu-toggle-cb" class="menu-overlay"></label>
+      <div class="container header-container">
+        <div class="logo">
+          <a href="index.html">
+            <h1><i class="fa-solid fa-leaf"></i> Cây Thuốc Nam</h1>
+          </a>
         </div>
+
+        <div class="search-box desktop-search">
+          <input type="text" placeholder="Tìm kiếm cây thuốc..." />
+          <button><i class="fa-solid fa-search"></i></button>
+        </div>
+
+        <label for="menu-toggle-cb" class="menu-toggle" id="mobile-menu-label">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
+
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="index.html" style="color: var(--primary-color)"
+                >Trang chủ</a
+              >
+            </li>
+            <li><a href="html/gioithieu.html">Giới thiệu</a></li>
+            <li class="dropdown">
+              <a href="html/danhmuc.html"
+                >Danh mục cây thuốc <i class="fa-solid fa-chevron-down"></i
+              ></a>
+              <ul class="dropdown-menu">
+                <li><a href="html/danhmuc.html">Cây thuốc trị ho</a></li>
+                <li><a href="html/danhmuc.html">Cây thuốc trị cảm</a></li>
+                <li><a href="html/danhmuc.html">Cây thuốc trị đau bụng</a></li>
+              </ul>
+            </li>
+            <li><a href="html/lienhe.html">Liên hệ</a></li>
+          </ul>
+        </nav>
+
+        <label for="menu-toggle-cb" class="menu-overlay"></label>
+      </div>
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-slider">
-            <div class="slide"
-                style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/banner.png');">
-            </div>
-            <div class="slide"
-                style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/banner1.png');">
-            </div>
-            <div class="slide"
-                style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/banner2.png');">
-            </div>
-            <div class="slide"
-                style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/banner3.png');">
-            </div>
-            <div class="slide"
-                style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/banner4.png');">
-            </div>
-        </div>
+      <div class="hero-slider">
+        <div
+          class="slide"
+          style="
+            background-image:
+              linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+              url(&quot;images/banner.png&quot;);
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image:
+              linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+              url(&quot;images/banner1.png&quot;);
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image:
+              linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+              url(&quot;images/banner2.png&quot;);
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image:
+              linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+              url(&quot;images/banner3.png&quot;);
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image:
+              linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+              url(&quot;images/banner4.png&quot;);
+          "
+        ></div>
+      </div>
 
-        <div class="hero-content fade-in">
-            <h2 style="font-size: 3.5rem; margin-bottom: 25px; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">Cây Thuốc Nam - Tri Thức Xanh</h2>
-            <p style="font-size: 1.3rem; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.8;">Khám phá kho tàng thảo dược quý giá của dân tộc, cung cấp thông tin khoa học giúp chăm sóc sức khỏe an toàn từ thiên nhiên.</p>
-            <div style="margin-top: 35px;">
-                <a href="#about-brief" class="btn" style="padding: 1rem 3rem;">Bắt Đầu Khám Phá</a>
-            </div>
+      <div class="hero-content fade-in">
+        <h2
+          style="
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+          "
+        >
+          Cây Thuốc Nam - Tri Thức Xanh
+        </h2>
+        <p
+          style="
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+          "
+        >
+          Khám phá kho tàng thảo dược quý giá của dân tộc, cung cấp thông tin
+          khoa học giúp chăm sóc sức khỏe an toàn từ thiên nhiên.
+        </p>
+        <div style="margin-top: 35px">
+          <a href="#about-brief" class="btn" style="padding: 1rem 3rem"
+            >Bắt Đầu Khám Phá</a
+          >
         </div>
+      </div>
     </section>
-
-    <!-- Section GIỚI THIỆU SƠ LƯỢC -->
     <section id="about-brief" class="container section-padding fade-in">
-        <div class="about-content">
-            <div class="about-text">
-                <span style="color: var(--primary-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Chào Mừng Bạn</span>
-                <h2 style="color: var(--primary-dark); font-size: 2.5rem; margin: 15px 0 25px; line-height: 1.2;">Nơi Gìn Giữ Tinh Hoa Y Học Cổ Truyền</h2>
-                <p style="margin-bottom: 15px; font-size: 1.05rem; color: var(--text-color); line-height: 1.9; text-align: justify;">
-                    Đất nước Việt Nam được thiên nhiên ưu đãi với hệ thực vật phong phú, trong đó có hàng ngàn loài cây thuốc quý giá. Từ ngàn đời xưa, tổ tiên ta đã biết dựa vào những loài cỏ cây quanh nhà để phòng và trị bệnh, đúc kết thành kho tàng y học dân tộc vô giá.
-                </p>
-                <p style="margin-bottom: 25px; font-size: 1.05rem; color: var(--text-color); line-height: 1.9; text-align: justify;">
-                    Website <b>Cây Thuốc Nam</b> ra đời với tâm huyết khơi dậy niềm tự hào và sự tin yêu đối với dược liệu nội địa. Chúng tôi cung cấp những thông tin được chọn lọc khoa học, dễ hiểu và ứng dụng cao để mỗi gia đình Việt đều có thêm kiến thức tự chăm sóc sức khỏe một cách an toàn và lành tính nhất.
-                </p>
-                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                    <a href="html/gioithieu.html" class="btn"><i class="fa-solid fa-circle-info" style="margin-right: 8px;"></i> Tìm hiểu thêm</a>
-                    <a href="#categories" class="btn-outline" style="padding: 0.8rem 2rem; border-width: 2px;"><i class="fa-solid fa-leaf" style="margin-right: 8px;"></i> Các loại cây thuốc</a>
-                </div>
-            </div>
-            <div class="about-image">
-                <img src="images/home_intro.png" alt="Giới thiệu Cây Thuốc Nam">
-            </div>
+      <div class="about-content">
+        <div class="about-text">
+          <span
+            style="
+              color: var(--primary-color);
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              font-size: 0.85rem;
+            "
+            >Chào Mừng Bạn</span
+          >
+          <h2
+            style="
+              color: var(--primary-dark);
+              font-size: 2.5rem;
+              margin: 15px 0 25px;
+              line-height: 1.2;
+            "
+          >
+            Nơi Gìn Giữ Tinh Hoa Y Học Cổ Truyền
+          </h2>
+          <p
+            style="
+              margin-bottom: 15px;
+              font-size: 1.05rem;
+              color: var(--text-color);
+              line-height: 1.9;
+              text-align: justify;
+            "
+          >
+            Đất nước Việt Nam được thiên nhiên ưu đãi với hệ thực vật phong phú,
+            trong đó có hàng ngàn loài cây thuốc quý giá. Từ ngàn đời xưa, tổ
+            tiên ta đã biết dựa vào những loài cỏ cây quanh nhà để phòng và trị
+            bệnh, đúc kết thành kho tàng y học dân tộc vô giá.
+          </p>
+          <p
+            style="
+              margin-bottom: 25px;
+              font-size: 1.05rem;
+              color: var(--text-color);
+              line-height: 1.9;
+              text-align: justify;
+            "
+          >
+            Website <b>Cây Thuốc Nam</b> ra đời với tâm huyết khơi dậy niềm tự
+            hào và sự tin yêu đối với dược liệu nội địa. Chúng tôi cung cấp
+            những thông tin được chọn lọc khoa học, dễ hiểu và ứng dụng cao để
+            mỗi gia đình Việt đều có thêm kiến thức tự chăm sóc sức khỏe một
+            cách an toàn và lành tính nhất.
+          </p>
+          <div style="display: flex; gap: 20px; flex-wrap: wrap">
+            <a href="html/gioithieu.html" class="btn"
+              ><i class="fa-solid fa-circle-info" style="margin-right: 8px"></i>
+              Tìm hiểu thêm</a
+            >
+            <a
+              href="#categories"
+              class="btn-outline"
+              style="padding: 0.8rem 2rem; border-width: 2px"
+              ><i class="fa-solid fa-leaf" style="margin-right: 8px"></i> Các
+              loại cây thuốc</a
+            >
+          </div>
         </div>
+        <div class="about-image">
+          <img src="images/home_intro.png" alt="Giới thiệu Cây Thuốc Nam" />
+        </div>
+      </div>
     </section>
 
     <section id="categories" class="featured-herbs container section-padding">
-        <h2 class="section-title fade-in">Cây thuốc nổi bật</h2>
+      <h2 class="section-title fade-in">Cây thuốc nổi bật</h2>
 
-        <div class="herb-grid" id="herb-grid">
-            <div class="herb-card fade-in" id="tri-cam">
-                <div class="herb-img">
-                    <img src="images/hinh3.png" alt="Cây Tía Tô">
-                </div>
-                <div class="herb-info">
-                    <h3>Cây Tía Tô</h3>
-                    <span class="tag">Trị Cảm</span>
-                    <p>Giúp giải cảm, ra mồ hôi, tiêu đờm, giảm ho hiệu quả.</p>
-                    <a href="html/chitiet.html" class="btn-outline">Xem chi tiết</a>
-                </div>
-            </div>
-
-            <div class="herb-card fade-in" id="tri-ho">
-                <div class="herb-img">
-                    <img src="images/hinh2.png" alt="Cây Bạc Hà">
-                </div>
-                <div class="herb-info">
-                    <h3>Cây Bạc Hà</h3>
-                    <span class="tag">Trị Ho</span>
-                    <p>Kháng khuẩn, làm dịu họng, giúp thông mũi và chữa ho.</p>
-                    <a href="html/bacha.html" class="btn-outline">Xem chi tiết</a>
-                </div>
-            </div>
-
-            <div class="herb-card fade-in" id="tri-dau-bung">
-                <div class="herb-img">
-                    <img src="images/hinh5.png" alt="Củ Gừng">
-                </div>
-                <div class="herb-info">
-                    <h3>Gừng Tươi</h3>
-                    <span class="tag">Trị Đau Bụng</span>
-                    <p>Làm ấm tỳ vị, hỗ trợ tiêu hóa, trị lạnh bụng, tiêu chảy.</p>
-                    <a href="html/gung.html" class="btn-outline">Xem chi tiết</a>
-                </div>
-            </div>
+      <div class="herb-grid" id="herb-grid">
+        <div class="herb-card fade-in" id="tri-cam">
+          <div class="herb-img">
+            <img src="images/hinh3.png" alt="Cây Tía Tô" />
+          </div>
+          <div class="herb-info">
+            <h3>Cây Tía Tô</h3>
+            <span class="tag">Trị Cảm</span>
+            <p>Giúp giải cảm, ra mồ hôi, tiêu đờm, giảm ho hiệu quả.</p>
+            <a href="html/chitiet.html" class="btn-outline">Xem chi tiết</a>
+          </div>
         </div>
+
+        <div class="herb-card fade-in" id="tri-ho">
+          <div class="herb-img">
+            <img src="images/hinh2.png" alt="Cây Bạc Hà" />
+          </div>
+          <div class="herb-info">
+            <h3>Cây Bạc Hà</h3>
+            <span class="tag">Trị Ho</span>
+            <p>Kháng khuẩn, làm dịu họng, giúp thông mũi và chữa ho.</p>
+            <a href="html/bacha.html" class="btn-outline">Xem chi tiết</a>
+          </div>
+        </div>
+
+        <div class="herb-card fade-in" id="tri-dau-bung">
+          <div class="herb-img">
+            <img src="images/hinh5.png" alt="Củ Gừng" />
+          </div>
+          <div class="herb-info">
+            <h3>Gừng Tươi</h3>
+            <span class="tag">Trị Đau Bụng</span>
+            <p>Làm ấm tỳ vị, hỗ trợ tiêu hóa, trị lạnh bụng, tiêu chảy.</p>
+            <a href="html/gung.html" class="btn-outline">Xem chi tiết</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer id="contact" class="footer">
-        <div class="container footer-content fade-in">
-            <div class="footer-col">
-                <h3>Về Chúng Tôi</h3>
-                <p>Cung cấp kiến thức về cách sống khỏe mạnh thông qua Y Học Cổ Truyền và Cây Thuốc Nam.</p>
-            </div>
-            <div class="footer-col">
-                <h3>Thông Tin Liên Hệ</h3>
-                <p><i class="fa-solid fa-location-dot"></i> TPHCM, Việt Nam</p>
-                <p><i class="fa-solid fa-phone"></i> 1800 1568</p>
-                <p><i class="fa-solid fa-envelope"></i> contact@thuocnam.vn</p>
-            </div>
-            <div class="footer-col">
-                <h3>Cộng đồng</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                </div>
-            </div>
+      <div class="container footer-content fade-in">
+        <div class="footer-col">
+          <h3>Về Chúng Tôi</h3>
+          <p>
+            Cung cấp kiến thức về cách sống khỏe mạnh thông qua Y Học Cổ Truyền
+            và Cây Thuốc Nam.
+          </p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Cây Thuốc Nam. Bản quyền thuộc về cộng đồng Thảo Dược Việt.</p>
+        <div class="footer-col">
+          <h3>Thông Tin Liên Hệ</h3>
+          <p><i class="fa-solid fa-location-dot"></i> TPHCM, Việt Nam</p>
+          <p><i class="fa-solid fa-phone"></i> 1800 1568</p>
+          <p><i class="fa-solid fa-envelope"></i> contact@thuocnam.vn</p>
         </div>
+        <div class="footer-col">
+          <h3>Cộng đồng</h3>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 Cây Thuốc Nam. Bản quyền thuộc về cộng đồng Thảo Dược
+          Việt.
+        </p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
