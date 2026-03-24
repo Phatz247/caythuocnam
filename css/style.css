@@ -273,6 +273,27 @@ a {
     transition: var(--transition);
 }
 
+/* Logic Menu Chi tiết không dùng JS */
+#menu-toggle-cb:checked ~ .header .nav {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+#menu-toggle-cb:checked ~ .header .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+#menu-toggle-cb:checked ~ .header .menu-toggle .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+#menu-toggle-cb:checked ~ .header .menu-toggle .bar:nth-child(2) {
+    opacity: 0;
+}
+#menu-toggle-cb:checked ~ .header .menu-toggle .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
 
 .hero {
     position: relative;
@@ -306,13 +327,22 @@ a {
     background-position: center;
     background-attachment: fixed;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out, transform 4s ease-out;
-    transform: scale(1.05);
+    animation: fadeZoom 25s infinite;
 }
 
-.hero-slider .slide.active {
-    opacity: 1;
-    transform: scale(1);
+/* Delay cho 5 slide khác nhau */
+.hero-slider .slide:nth-child(1) { animation-delay: 0s; }
+.hero-slider .slide:nth-child(2) { animation-delay: 5s; }
+.hero-slider .slide:nth-child(3) { animation-delay: 10s; }
+.hero-slider .slide:nth-child(4) { animation-delay: 15s; }
+.hero-slider .slide:nth-child(5) { animation-delay: 20s; }
+
+@keyframes fadeZoom {
+    0% { opacity: 0; transform: scale(1.05); }
+    5% { opacity: 1; }
+    20% { opacity: 1; }
+    25% { opacity: 0; transform: scale(1); }
+    100% { opacity: 0; }
 }
 
 .hero-content {
@@ -589,12 +619,6 @@ a {
 }
 
 .fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.fade-in.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -794,7 +818,7 @@ a {
         backdrop-filter: blur(2px);
     }
 
-    .menu-overlay.active {
+    #menu-toggle-cb:checked ~ .header .menu-overlay {
         opacity: 1;
         visibility: visible;
     }
@@ -815,8 +839,7 @@ a {
         border-radius: 10px 0 0 10px;
     }
 
-
-    .nav.active {
+    #menu-toggle-cb:checked ~ .header .nav {
         right: 0;
     }
 
@@ -854,8 +877,11 @@ a {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background: #f9f9f9;
+        font-weight: 600;
     }
 
+    /* Hiển thị luôn dropdown trên mobile khi không có JS */
     .dropdown-menu {
         position: static;
         opacity: 1;
@@ -864,13 +890,8 @@ a {
         box-shadow: none;
         border-top: none;
         background-color: rgba(96, 173, 94, 0.05);
-        display: none;
+        display: block; 
         border-radius: 0;
-    }
-
-    .dropdown.active .dropdown-menu {
-        display: block;
-        animation: slideDown 0.3s ease-out forwards;
     }
 
     .dropdown-menu a {
@@ -989,4 +1010,31 @@ a {
     .herb-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Xử lý Form thành công không dùng JS */
+.success-message-static {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: #e8f5e9;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+    color: var(--primary-dark);
+}
+
+#form-success:target {
+    display: block !important;
+}
+
+#form-success:target ~ #contact-form {
+    display: none;
+}
+
+#m-form-success:target {
+    display: block !important;
+}
+
+#m-form-success:target ~ #mission-contact-form {
+    display: none;
 }

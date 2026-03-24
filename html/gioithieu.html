@@ -13,11 +13,47 @@
 </head>
 
 <body>
+    <!-- Header & Navigation (Pure CSS) -->
+    <input type="checkbox" id="menu-toggle-cb" style="display: none;">
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1><i class="fa-solid fa-leaf"></i> Cây Thuốc Nam</h1>
+                </a>
+            </div>
 
+            <div class="search-box desktop-search">
+                <input type="text" placeholder="Tìm kiếm cây thuốc...">
+                <button><i class="fa-solid fa-search"></i></button>
+            </div>
 
-    <div id="header-placeholder"></div>
+            <!-- Hamburger Icon -->
+            <label for="menu-toggle-cb" class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
 
+            <nav class="nav">
+                <ul>
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="gioithieu.html" style="color:var(--primary-color)">Giới thiệu</a></li>
+                    <li class="dropdown">
+                        <a href="../index.html#categories">Danh mục cây thuốc <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../index.html#tri-ho">Cây thuốc trị ho</a></li>
+                            <li><a href="../index.html#tri-cam">Cây thuốc trị cảm</a></li>
+                            <li><a href="../index.html#tri-dau-bung">Cây thuốc trị đau bụng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="lienhe.html">Liên hệ</a></li>
+                </ul>
+            </nav>
 
+            <label for="menu-toggle-cb" class="menu-overlay"></label>
+        </div>
+    </header>
 
     <!-- Hero Banner -->
     <section class="about-hero fade-in" style="background: linear-gradient(135deg, var(--primary-dark), var(--primary-color), var(--primary-light)); padding: 100px 20px; text-align: center; margin-top: 20px;">
@@ -105,7 +141,11 @@
                 <h3 style="color: var(--primary-dark); font-size: 1.8rem; margin-bottom: 10px;">Gửi Câu Hỏi Tư Vấn</h3>
                 <p style="color: var(--text-light); margin-bottom: 25px; font-size: 0.95rem;">Bạn có thắc mắc về vị thuốc hay muốn chia sẻ bài thuốc? Hãy để lại thông tin, chúng tôi luôn sẵn lòng lắng nghe.</p>
 
-                <form id="mission-contact-form">
+                <div id="m-form-success" class="success-message-static">
+                    <i class="fa-solid fa-circle-check" style="margin-right: 10px;"></i>
+                    <b>Gửi thành công!</b> Chúng tôi sẽ phản hồi sớm nhất có thể.
+                </div>
+                <form id="mission-contact-form" action="#m-form-success">
                     <div class="form-group">
                         <label for="m-name" style="font-size: 0.85rem; color: var(--text-color);">Họ và tên của bạn</label>
                         <input type="text" id="m-name" placeholder="Ví dụ: Nguyễn Văn A" required style="padding: 10px 15px;">
@@ -122,39 +162,35 @@
                         <i class="fa-solid fa-paper-plane" style="margin-right: 10px;"></i> Gửi Câu Hỏi Ngay
                     </button>
                 </form>
-
-                <div id="m-form-success" style="display:none; margin-top: 20px; padding: 20px; background: #e8f5e9; border-left: 4px solid var(--primary-color); border-radius: 8px; color: var(--primary-dark); animation: fadeIn 0.5s ease;">
-                    <i class="fa-solid fa-circle-check" style="margin-right: 10px;"></i>
-                    <b>Gửi thành công!</b> Chúng tôi sẽ phản hồi sớm nhất có thể.
-                </div>
             </div>
-
         </div>
     </section>
 
-    <script>
-        // Xử lý form sứ mệnh ngay tại đây để không cần can thiệp script ngoại vi
-        document.addEventListener('DOMContentLoaded', function() {
-            const mForm = document.getElementById('mission-contact-form');
-            if(mForm) {
-                mForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    this.parentElement.querySelector('#m-form-success').style.display = 'block';
-                    this.style.display = 'none';
-                });
-            }
-        });
-    </script>
-
-
-    <div id="footer-placeholder"></div>
-
-    <script src="../js/components.js"></script>
-    <script>
-        renderHeader('gioithieu');
-        renderFooter();
-    </script>
-    <script src="../js/script.js"></script>
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container footer-content fade-in">
+            <div class="footer-col">
+                <h3>Về Chúng Tôi</h3>
+                <p>Cung cấp kiến thức về cách sống khỏe mạnh thông qua Y Học Cổ Truyền và Cây Thuốc Nam.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Thông Tin Liên Hệ</h3>
+                <p><i class="fa-solid fa-location-dot"></i> TPHCM, Việt Nam</p>
+                <p><i class="fa-solid fa-phone"></i> 1800 1568</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@thuocnam.vn</p>
+            </div>
+            <div class="footer-col">
+                <h3>Cộng đồng</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cây Thuốc Nam. Bản quyền thuộc về cộng đồng Thảo Dược Việt.</p>
+        </div>
+    </footer>
 </body>
-
 </html>

@@ -13,12 +13,51 @@
 </head>
 
 <body>
+    <!-- Header & Navigation (Pure CSS Mobile Menu) -->
+    <input type="checkbox" id="menu-toggle-cb" style="display: none;">
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1><i class="fa-solid fa-leaf"></i> Cây Thuốc Nam</h1>
+                </a>
+            </div>
 
-    <div id="header-placeholder"></div>
+            <div class="search-box desktop-search">
+                <input type="text" placeholder="Tìm kiếm cây thuốc...">
+                <button><i class="fa-solid fa-search"></i></button>
+            </div>
+
+            <!-- Hamburger Icon (Label cho Checkbox) -->
+            <label for="menu-toggle-cb" class="menu-toggle" id="mobile-menu-label">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" style="color:var(--primary-color)">Trang chủ</a></li>
+                    <li><a href="html/gioithieu.html">Giới thiệu</a></li>
+                    <li class="dropdown">
+                        <a href="#categories">Danh mục cây thuốc <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#tri-ho">Cây thuốc trị ho</a></li>
+                            <li><a href="#tri-cam">Cây thuốc trị cảm</a></li>
+                            <li><a href="#tri-dau-bung">Cây thuốc trị đau bụng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="html/lienhe.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+
+            <label for="menu-toggle-cb" class="menu-overlay"></label>
+        </div>
+    </header>
 
     <section id="home" class="hero">
         <div class="hero-slider">
-            <div class="slide active"
+            <div class="slide"
                 style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/banner.png');">
             </div>
             <div class="slide"
@@ -71,7 +110,7 @@
         <h2 class="section-title fade-in">Cây thuốc nổi bật</h2>
 
         <div class="herb-grid" id="herb-grid">
-            <div class="herb-card fade-in" data-name="Tía tô trị cảm">
+            <div class="herb-card fade-in" id="tri-cam">
                 <div class="herb-img">
                     <img src="images/hinh3.png" alt="Cây Tía Tô">
                 </div>
@@ -83,7 +122,7 @@
                 </div>
             </div>
 
-            <div class="herb-card fade-in" data-name="Bạc hà trị ho">
+            <div class="herb-card fade-in" id="tri-ho">
                 <div class="herb-img">
                     <img src="images/hinh2.png" alt="Cây Bạc Hà">
                 </div>
@@ -95,7 +134,7 @@
                 </div>
             </div>
 
-            <div class="herb-card fade-in" data-name="Gừng trị đau bụng">
+            <div class="herb-card fade-in" id="tri-dau-bung">
                 <div class="herb-img">
                     <img src="images/hinh5.png" alt="Củ Gừng">
                 </div>
@@ -106,19 +145,33 @@
                     <a href="html/gung.html" class="btn-outline">Xem chi tiết</a>
                 </div>
             </div>
-
-            <p id="no-results" style="display: none; text-align: center; color: #777; margin-top: 2rem;">Không tìm thấy
-                cây
-                thuốc nào phù hợp.</p>
+        </div>
     </section>
 
-    <div id="footer-placeholder"></div>
-    <script src="js/components.js"></script>
-    <script>
-        renderHeader('home');
-        renderFooter();
-    </script>
-    <script src="js/script.js"></script>
+    <footer id="contact" class="footer">
+        <div class="container footer-content fade-in">
+            <div class="footer-col">
+                <h3>Về Chúng Tôi</h3>
+                <p>Cung cấp kiến thức về cách sống khỏe mạnh thông qua Y Học Cổ Truyền và Cây Thuốc Nam.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Thông Tin Liên Hệ</h3>
+                <p><i class="fa-solid fa-location-dot"></i> TPHCM, Việt Nam</p>
+                <p><i class="fa-solid fa-phone"></i> 1800 1568</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@thuocnam.vn</p>
+            </div>
+            <div class="footer-col">
+                <h3>Cộng đồng</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cây Thuốc Nam. Bản quyền thuộc về cộng đồng Thảo Dược Việt.</p>
+        </div>
+    </footer>
 </body>
-
 </html>
