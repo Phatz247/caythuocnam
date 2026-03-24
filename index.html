@@ -19,17 +19,52 @@
     <section id="home" class="hero">
         <div class="hero-slider">
             <div class="slide active"
-                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/banner.png');">
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/banner.png');">
             </div>
             <div class="slide"
-                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/banner1.png');">
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/banner1.png');">
             </div>
             <div class="slide"
-                style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/banner2.png');">
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/banner2.png');">
+            </div>
+            <div class="slide"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/banner3.png');">
+            </div>
+            <div class="slide"
+                style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('images/banner4.png');">
             </div>
         </div>
 
+        <div class="hero-content fade-in">
+            <h2 style="font-size: 3.5rem; margin-bottom: 25px; text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">Cây Thuốc Nam - Tri Thức Xanh</h2>
+            <p style="font-size: 1.3rem; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.8;">Khám phá kho tàng thảo dược quý giá của dân tộc, cung cấp thông tin khoa học giúp chăm sóc sức khỏe an toàn từ thiên nhiên.</p>
+            <div style="margin-top: 35px;">
+                <a href="#about-brief" class="btn" style="padding: 1rem 3rem;">Bắt Đầu Khám Phá</a>
+            </div>
+        </div>
+    </section>
 
+    <!-- Section GIỚI THIỆU SƠ LƯỢC -->
+    <section id="about-brief" class="container section-padding fade-in">
+        <div class="about-content">
+            <div class="about-text">
+                <span style="color: var(--primary-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Chào Mừng Bạn</span>
+                <h2 style="color: var(--primary-dark); font-size: 2.5rem; margin: 15px 0 25px; line-height: 1.2;">Nơi Gìn Giữ Tinh Hoa Y Học Cổ Truyền</h2>
+                <p style="margin-bottom: 15px; font-size: 1.05rem; color: var(--text-color); line-height: 1.9; text-align: justify;">
+                    Đất nước Việt Nam được thiên nhiên ưu đãi với hệ thực vật phong phú, trong đó có hàng ngàn loài cây thuốc quý giá. Từ ngàn đời xưa, tổ tiên ta đã biết dựa vào những loài cỏ cây quanh nhà để phòng và trị bệnh, đúc kết thành kho tàng y học dân tộc vô giá.
+                </p>
+                <p style="margin-bottom: 25px; font-size: 1.05rem; color: var(--text-color); line-height: 1.9; text-align: justify;">
+                    Website <b>Cây Thuốc Nam</b> ra đời với tâm huyết khơi dậy niềm tự hào và sự tin yêu đối với dược liệu nội địa. Chúng tôi cung cấp những thông tin được chọn lọc khoa học, dễ hiểu và ứng dụng cao để mỗi gia đình Việt đều có thêm kiến thức tự chăm sóc sức khỏe một cách an toàn và lành tính nhất.
+                </p>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <a href="html/gioithieu.html" class="btn"><i class="fa-solid fa-circle-info" style="margin-right: 8px;"></i> Tìm hiểu thêm</a>
+                    <a href="#categories" class="btn-outline" style="padding: 0.8rem 2rem; border-width: 2px;"><i class="fa-solid fa-leaf" style="margin-right: 8px;"></i> Các loại cây thuốc</a>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="images/home_intro.png" alt="Giới thiệu Cây Thuốc Nam">
+            </div>
+        </div>
     </section>
 
     <section id="categories" class="featured-herbs container section-padding">
@@ -70,16 +105,14 @@
                     <p>Làm ấm tỳ vị, hỗ trợ tiêu hóa, trị lạnh bụng, tiêu chảy.</p>
                     <a href="html/gung.html" class="btn-outline">Xem chi tiết</a>
                 </div>
-        </div>
+            </div>
 
-        <p id="no-results" style="display: none; text-align: center; color: #777; margin-top: 2rem;">Không tìm thấy cây
-            thuốc nào phù hợp.</p>
+            <p id="no-results" style="display: none; text-align: center; color: #777; margin-top: 2rem;">Không tìm thấy
+                cây
+                thuốc nào phù hợp.</p>
     </section>
 
-
-
     <div id="footer-placeholder"></div>
-
     <script src="js/components.js"></script>
     <script>
         renderHeader('home');

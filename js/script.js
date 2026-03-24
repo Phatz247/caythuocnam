@@ -156,12 +156,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (slides.length > 0) {
         let currentSlide = 0;
 
-        // Cứ 2000 mili-giây (2 giây) thì thực hiện đổi ảnh
+        // Cứ 4000 mili-giây (4 giây) thì thực hiện đổi ảnh
         setInterval(() => {
             slides[currentSlide].classList.remove('active'); // Ẩn ảnh cũ đi
             currentSlide = (currentSlide + 1) % slides.length; // Chọn ảnh kế tiếp
             slides[currentSlide].classList.add('active'); // Hiện ảnh mới
-        }, 2000);
+        }, 4000);
     }
 
     // ============================================

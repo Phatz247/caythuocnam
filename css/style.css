@@ -305,11 +305,14 @@ a {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out, transform 4s ease-out;
+    transform: scale(1.05);
 }
 
 .hero-slider .slide.active {
     opacity: 1;
+    transform: scale(1);
 }
 
 .hero-content {
