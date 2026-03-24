@@ -1,16 +1,13 @@
 
-// Phát hiện tự động: đang ở trang gốc (/) hay trang con (/html/)
 const isRoot = !window.location.pathname.includes('/html/');
 const base = isRoot ? '' : '../';
 
-// ============================================================
-// HEADER COMPONENT
-// ============================================================
+// Header
 function renderHeader(activePage = '') {
     const pages = {
-        home:     { label: 'Trang chủ',  href: `${base}index.html` },
-        gioithieu:{ label: 'Giới thiệu', href: `${base}html/gioithieu.html` },
-        lienhe:   { label: 'Liên hệ',    href: `${base}html/lienhe.html` },
+        home: { label: 'Trang chủ', href: `${base}index.html` },
+        gioithieu: { label: 'Giới thiệu', href: `${base}html/gioithieu.html` },
+        lienhe: { label: 'Liên hệ', href: `${base}html/lienhe.html` },
     };
 
     const navLink = (key) =>
@@ -63,9 +60,7 @@ function renderHeader(activePage = '') {
     if (placeholder) placeholder.outerHTML = headerHTML;
 }
 
-// ============================================================
-// FOOTER COMPONENT
-// ============================================================
+// Footer
 function renderFooter() {
     const footerHTML = `
     <footer id="contact" class="footer">
@@ -76,8 +71,8 @@ function renderFooter() {
             </div>
             <div class="footer-col">
                 <h3>Thông Tin Liên Hệ</h3>
-                <p><i class="fa-solid fa-location-dot"></i> Hà Nội, Việt Nam</p>
-                <p><i class="fa-solid fa-phone"></i> +84 123 456 789</p>
+                <p><i class="fa-solid fa-location-dot"></i> TPHCM, Việt Nam</p>
+                <p><i class="fa-solid fa-phone"></i> 1800 1568</p>
                 <p><i class="fa-solid fa-envelope"></i> contact@thuocnam.vn</p>
             </div>
             <div class="footer-col">

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <div id="header-placeholder"></div>
 
@@ -17,11 +19,12 @@
         <div class="contact-wrapper">
             <div class="contact-info">
                 <h3>Kết nối Dược liệu xanh</h3>
-                <p>Chúng tôi luôn sẵn lòng lắng nghe và giải đáp các thắc mắc của bạn về kiến thức Y Học Cổ Truyền để mang lại cho bạn sự an tâm về sức khoẻ.</p>
+                <p>Chúng tôi luôn sẵn lòng lắng nghe và giải đáp các thắc mắc của bạn về kiến thức Y Học Cổ Truyền để
+                    mang lại cho bạn sự an tâm về sức khoẻ.</p>
                 <ul>
-                    <li><i class="fa-solid fa-location-dot"></i> Địa chỉ: Số 50, Làng Y Học, Hà Nội, Việt Nam</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Địa chỉ: 613, Âu Cơ, Tân Phú, TP.HCM, Việt Nam</li>
                     <li><i class="fa-solid fa-envelope"></i> Email: lienhe@thuocnam.vn</li>
-                    <li><i class="fa-solid fa-phone"></i> Điện thoại tư vấn: +84 123 456 789</li>
+                    <li><i class="fa-solid fa-phone"></i> Điện thoại tư vấn: 1800 1568</li>
                 </ul>
             </div>
             <div class="contact-form">
@@ -40,7 +43,8 @@
                     </div>
                     <button type="submit" class="btn">Gửi Câu Hỏi</button>
                 </form>
-                <div id="form-success" style="display:none; margin-top: 20px; padding: 20px; background: #e8f5e9; border-left: 4px solid var(--primary-color); border-radius: 8px; color: var(--primary-dark);">
+                <div id="form-success"
+                    style="display:none; margin-top: 20px; padding: 20px; background: #e8f5e9; border-left: 4px solid var(--primary-color); border-radius: 8px; color: var(--primary-dark);">
                     <i class="fa-solid fa-circle-check" style="font-size:1.4rem; margin-right: 10px;"></i>
                     <b>Gửi thành công!</b> Chúng tôi sẽ liên hệ lại với bạn sớm nhất có thể.
                 </div>
@@ -52,13 +56,12 @@
     <script>renderHeader('lienhe'); renderFooter();</script>
     <script src="../js/script.js"></script>
     <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
             e.preventDefault();
             this.style.display = 'none';
             document.getElementById('form-success').style.display = 'block';
         });
     </script>
 </body>
+
 </html>
-
-

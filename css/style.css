@@ -1,31 +1,33 @@
-/* Thiết lập cơ bản (Reset & CSS Variables) */
 :root {
-    /* Màu sắc chủ đạo từ thiên nhiên */
-    --primary-color: #2e7d32;      /* Xanh lá đậm */
-    --primary-light: #60ad5e;      /* Xanh lá nhạt */
-    --primary-dark: #005005;       /* Xanh lá rất đậm */
-    --accent-color: #fbc02d;       /* Màu nhấn vàng (Nắng) */
-    --bg-color: #f9fbf9;           /* Nền xám xanh nhạt, dịu mắt */
-    --text-color: #333333;         /* Chữ đen xám */
-    --text-light: #666666;         /* Chữ nhạt hơn cho đoạn văn */
+
+    --primary-color: #2e7d32;
+    --primary-light: #60ad5e;
+    --primary-dark: #005005;
+    --accent-color: #fbc02d;
+    --bg-color: #f9fbf9;
+    --text-color: #333333;
+    --text-light: #666666;
     --white: #ffffff;
     --transition: all 0.3s ease-in-out;
-    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Đổ bóng nhẹ nhàng */
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-/* Reset lại padding/margin mặc định của trình duyệt */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Hiệu ứng cuộn trang mượt mà */
 html {
     scroll-behavior: smooth;
 }
 
-body, input, button, textarea, select, table {
+body,
+input,
+button,
+textarea,
+select,
+table {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -36,27 +38,27 @@ body {
 }
 
 ul {
-    list-style: none; /* Bỏ dấu chấm của danh sách */
+    list-style: none;
 }
 
 a {
-    text-decoration: none; /* Bỏ gạch chân của liên kết */
+    text-decoration: none;
     color: inherit;
 }
 
-/* Container giới hạn độ rộng nội dung */
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Khoảng cách giữa các phần (Sections) */
+
 .section-padding {
     padding: 5rem 0;
 }
 
-/* Tiêu đề của từng section */
+
 .section-title {
     text-align: center;
     font-size: 2.2rem;
@@ -65,7 +67,7 @@ a {
     position: relative;
 }
 
-/* Đường kẻ dưới tiêu đề (Trang trí) */
+
 .section-title::after {
     content: "";
     position: absolute;
@@ -78,7 +80,6 @@ a {
     border-radius: 5px;
 }
 
-/* Nút bấm (Buttons) */
 .btn {
     display: inline-block;
     background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
@@ -114,7 +115,6 @@ a {
     border-color: var(--primary-color);
 }
 
-/* ---------------- HEADER & NAVIGATION ---------------- */
 .header {
     background-color: var(--white);
     box-shadow: var(--box-shadow);
@@ -132,19 +132,17 @@ a {
     transition: height 0.3s ease;
 }
 
-/* Lớp shrink sẽ được đẩy vào bằng JS khi cuộn trang */
 .header.shrink {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    background-color: rgba(255, 255, 255, 0.95); /* Header hơi trong suốt khi cuộn */
-    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .header.shrink .header-container {
-    height: 60px; /* Giảm chiều cao của header */
+    height: 60px;
 }
 
 .header.shrink .logo h1 {
-    font-size: 1.4rem; /* Giảm cỡ chữ Logo để cân xứng */
+    font-size: 1.4rem;
 }
 
 .logo h1 {
@@ -156,11 +154,10 @@ a {
     transition: font-size 0.3s ease;
 }
 
-/* Hộp Tìm Kiếm Nhanh (Search Box) */
 .search-box {
     display: flex;
     align-items: center;
-    background-color: rgba(96, 173, 94, 0.1); /* Màu nền xanh rất nhạt */
+    background-color: rgba(96, 173, 94, 0.1);
     border-radius: 20px;
     padding: 6px 15px;
     width: 250px;
@@ -189,32 +186,31 @@ a {
 }
 
 .mobile-search {
-    display: none; /* Chỉ hiện trên mobile */
+    display: none;
 }
 
-/* Navigation Links (Menu chính) */
-.nav > ul {
+
+.nav>ul {
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
-.nav > ul > li {
+.nav>ul>li {
     position: relative;
-    padding: 1rem 0; /* Giúp dễ di chuột vào hover */
+    padding: 1rem 0;
 }
 
-.nav > ul > li > a {
+.nav>ul>li>a {
     font-weight: 500;
     color: var(--text-color);
     transition: var(--transition);
 }
 
-.nav > ul > li > a:hover {
+.nav>ul>li>a:hover {
     color: var(--primary-color);
 }
 
-/* Dropdown Menu (Menu con thả xuống) */
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -231,7 +227,6 @@ a {
     z-index: 1000;
 }
 
-/* Hover để mở dropdown trên Desktop */
 .dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
@@ -257,18 +252,17 @@ a {
 .dropdown-menu a:hover {
     background-color: rgba(96, 173, 94, 0.1);
     color: var(--primary-color);
-    padding-left: 25px; /* Hiệu ứng thườn nhẹ qua phải */
+    padding-left: 25px;
 }
 
-/* Hamburger Menu Toggle (Nút 3 gạch trên Mobile) */
 .menu-toggle {
-    display: none; /* Ẩn mặc định trên Desktop */
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 21px;
     cursor: pointer;
-    z-index: 1001; /* Layer nằm trên nav */
+    z-index: 1001;
 }
 
 .menu-toggle .bar {
@@ -279,7 +273,7 @@ a {
     transition: var(--transition);
 }
 
-/* ---------------- HERO SECTION ---------------- */
+
 .hero {
     position: relative;
     height: 80vh;
@@ -290,17 +284,16 @@ a {
     text-align: center;
     color: var(--white);
     padding: 0 20px;
-    overflow: hidden; /* Cắt phần ảnh bị thừa khỏi slider */
+    overflow: hidden;
 }
 
-/* Ảnh nền thay đổi làm Banner */
 .hero-slider {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Đảm bảo nằm dưới phần text .hero-content */
+    z-index: -1;
 }
 
 .hero-slider .slide {
@@ -311,9 +304,8 @@ a {
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Parallax effect */
-    opacity: 0;
-    transition: opacity 1s ease-in-out; /* Thời gian chuyển mượt (1 giây fadeIn/Out) */
+    background-attachment: fixed;
+    transition: opacity 1s ease-in-out;
 }
 
 .hero-slider .slide.active {
@@ -335,10 +327,8 @@ a {
     margin-bottom: 30px;
 }
 
-/* ---------------- DANH MỤC CÂY THUỐC (GRID) ---------------- */
 .herb-grid {
     display: grid;
-    /* CSS Grid đảm bảo Responsive tự động */
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 30px;
 }
@@ -372,13 +362,13 @@ a {
 }
 
 .herb-card:hover .herb-img img {
-    transform: scale(1.08); /* Zoom nhẹ ảnh khi hover */
+    transform: scale(1.08);
 }
 
 .herb-info {
     padding: 25px 20px;
     text-align: center;
-    flex: 1; /* Đẩy footer thẻ xuống kịch dưới nếu nội dung ngắn */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -407,7 +397,6 @@ a {
     font-size: 0.95rem;
 }
 
-/* ---------------- GIỚI THIỆU (ABOUT) ---------------- */
 .about-content {
     display: flex;
     gap: 50px;
@@ -438,10 +427,10 @@ a {
 }
 
 .about-image:hover img {
-    transform: scale(1.03); /* Phóng to nhẹ ảnh */
+    transform: scale(1.03);
 }
 
-/* ---------------- CHI TIẾT CÂY THUỐC (DETAIL PAGE) ---------------- */
+
 .detail-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -449,13 +438,13 @@ a {
     background: var(--white);
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05); /* Đổ bóng sang trọng */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
     align-items: start;
 }
 
 .detail-image {
     position: sticky;
-    top: 100px; /* Bám dính màn hình khi cuộn nội dung chữ dài ngang */
+    top: 100px;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -471,7 +460,7 @@ a {
 }
 
 .detail-image:hover img {
-    transform: scale(1.05); /* Tăng trải nghiệm chạm */
+    transform: scale(1.05);
 }
 
 .detail-content {
@@ -517,7 +506,6 @@ a {
     color: var(--primary-dark);
 }
 
-/* ---------------- FOOTER (LIÊN HỆ) ---------------- */
 .footer {
     background-color: var(--primary-dark);
     color: var(--white);
@@ -526,7 +514,7 @@ a {
 
 .footer-content {
     display: flex;
-    flex-wrap: wrap; /* Tự xuống dòng trên màn hình nhỏ */
+    flex-wrap: wrap;
     gap: 40px;
     justify-content: space-between;
     margin-bottom: 40px;
@@ -597,7 +585,6 @@ a {
     font-size: 0.9rem;
 }
 
-/* ---------------- HIỆU ỨNG JS (ANIMATIONS) ---------------- */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -609,18 +596,18 @@ a {
     transform: translateY(0);
 }
 
-/* ---------------- BẢNG CSS MẪU (THẺ TABLE) ---------------- */
 .herb-table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0 40px;
     background-color: var(--white);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     border-radius: 10px;
     overflow: hidden;
 }
 
-.herb-table th, .herb-table td {
+.herb-table th,
+.herb-table td {
     padding: 15px 20px;
     text-align: left;
     border-bottom: 1px solid #eee;
@@ -636,7 +623,6 @@ a {
     background-color: rgba(96, 173, 94, 0.05);
 }
 
-/* ---------------- TRANG LIÊN HỆ (CONTACT PAGE FORM) ---------------- */
 .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -681,7 +667,8 @@ a {
     font-weight: 500;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid #ddd;
@@ -692,42 +679,37 @@ a {
     transition: var(--transition);
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
 }
 
-/* ---------------- RESPONSIVE DESIGN (CHO MOBILE & TABLET) ---------------- */
 
-/* Áp dụng cho Laptop nhỏ & Tablet ngang */
 @media screen and (max-width: 1024px) {
     .container {
         width: 95%;
     }
-    
-    .nav > ul {
+
+    .nav>ul {
         gap: 1.5rem;
     }
-    
+
     .search-box {
         width: 200px;
     }
 }
 
-/* Áp dụng cho Tablet dọc */
 @media screen and (max-width: 900px) {
-    /* Đưa layout giới thiệu thành dọc trên Tablet */
     .about-content {
         flex-direction: column;
-        /* Loại bỏ text-align center để không vỡ list */
     }
-    
+
     .about-image {
-        order: -1; /* Đưa ảnh lên trên chữ */
+        order: -1;
         margin-bottom: 20px;
     }
 
-    /* Thu nhỏ cột chi tiết thành 1 cột xếp dọc dọc mượt mà */
     .detail-wrapper {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -742,13 +724,12 @@ a {
     .hero-content h2 {
         font-size: 2.8rem;
     }
-    
+
     .section-padding {
-        padding: 4rem 0; /* Giảm khoảng cách cho hợp chiều dọc màn hình */
+        padding: 4rem 0;
     }
 }
 
-/* Áp dụng cho Điện thoại thông minh (Phone) */
 @media screen and (max-width: 768px) {
     .section-padding {
         padding: 3rem 0;
@@ -759,11 +740,10 @@ a {
         margin-bottom: 2rem;
     }
 
-    /* Header Mobile setup */
     .header-container {
         height: 70px;
     }
-    
+
     .header.shrink .header-container {
         height: 60px;
     }
@@ -783,20 +763,20 @@ a {
     }
 
     .desktop-search {
-        display: none; /* Ẩn ô search desktop */
+        display: none;
     }
-    
+
     .menu-toggle {
-        display: flex; /* Hiện nút hamburger */
+        display: flex;
     }
-    
+
     .mobile-search {
-        display: flex; /* Hiện ô search mobile trong menu */
+        display: flex;
         margin: 20px 20px 10px;
         width: auto;
     }
-    
-    /* Overlay làm tối nội dung khi mở menu */
+
+
     .menu-overlay {
         position: fixed;
         top: 0;
@@ -810,131 +790,125 @@ a {
         transition: var(--transition);
         backdrop-filter: blur(2px);
     }
-    
+
     .menu-overlay.active {
         opacity: 1;
         visibility: visible;
     }
-    
-    /* Thiết kế Menu trượt ngang (Sidebar) cho Mobile */
+
     .nav {
         position: fixed;
         top: 0;
-        right: -100%; /* Ẩn menu bằng cách đẩy ra ngoài màn hình */
+        right: -100%;
         width: 80%;
         max-width: 320px;
         height: 100vh;
         background-color: var(--white);
         box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
-        transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1); /* Mượt mà trượt vào */
-        padding-top: 80px; /* Đẩy xuống tránh nút đóng */
-        overflow-y: auto; /* Cuộn nếu menu quá dài */
+        transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        padding-top: 80px;
+        overflow-y: auto;
         z-index: 1000;
         border-radius: 10px 0 0 10px;
     }
 
-    /* Lớp Active để kích hoạt Menu */
+
     .nav.active {
         right: 0;
     }
 
-    .nav > ul {
+    .nav>ul {
         flex-direction: column;
         align-items: stretch;
         gap: 0;
     }
 
-    .nav > ul > li {
+    .nav>ul>li {
         width: 100%;
         border-bottom: 1px solid #f0f0f0;
-        padding: 0; /* Ghi đè padding */
+        padding: 0;
     }
 
-    .nav > ul > li > a {
+    .nav>ul>li>a {
         display: block;
         padding: 16px 20px;
         font-size: 1.1rem;
         font-weight: 500;
         color: var(--text-color);
     }
-    
-    .nav > ul > li > a:hover {
-        background-color: rgba(46, 125, 50, 0.05); /* Hiệu ứng hover cho liên kết mobile */
+
+    .nav>ul>li>a:hover {
+        background-color: rgba(46, 125, 50, 0.05);
         color: var(--primary-color);
     }
 
-    /* Xử lý Dropdown trên mobile thành Accordion (Mở chẻ xuống) */
     .dropdown {
         flex-direction: column;
         align-items: stretch;
     }
 
-    .dropdown > a {
+    .dropdown>a {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    /* Mặc định ẩn dropdown trên mobile */
     .dropdown-menu {
-        position: static; /* Khôi phục Flow chuẩn */
+        position: static;
         opacity: 1;
         visibility: visible;
         transform: none;
         box-shadow: none;
         border-top: none;
-        background-color: rgba(96, 173, 94, 0.05); /* JS sẽ đổi display thành block */
-        display: none; 
+        background-color: rgba(96, 173, 94, 0.05);
+        display: none;
         border-radius: 0;
     }
 
-    /* Khi có class 'active' do JS cấp: mở menu con */
     .dropdown.active .dropdown-menu {
         display: block;
         animation: slideDown 0.3s ease-out forwards;
     }
 
     .dropdown-menu a {
-        padding-left: 40px; /* Căn lùi vào 1 ít cho thấy cấp độ con */
+        padding-left: 40px;
         font-size: 1rem;
         color: var(--text-light);
     }
 
-    /* Sửa lỗi hiển thị Banner: Quy định lại tỷ lệ ngang trên Điện thoại để không làm hụt mất chữ trong ảnh */
     .hero {
         min-height: 250px;
-        height: 55vw; 
+        height: 55vw;
     }
 
     .hero-content h2 {
         font-size: 2.2rem;
         margin-bottom: 15px;
     }
-    
+
     .hero-content p {
         font-size: 1.05rem;
         margin-bottom: 25px;
         line-height: 1.5;
     }
-    
-    /* Animation cho nút Hamburger thành dấu X */
+
     .menu-toggle.active .bar:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
+
     .menu-toggle.active .bar:nth-child(2) {
         opacity: 0;
     }
+
     .menu-toggle.active .bar:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
 
-    /* Đảm bảo Grid phù hợp kích thước màn hình */
     .herb-grid {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 20px;
     }
 
-    /* Căn giữa Footer trên điện thoại */
     .footer-content {
         flex-direction: column;
         gap: 30px;
@@ -949,15 +923,14 @@ a {
     .social-links {
         justify-content: center;
     }
-    
-    /* Căn chỉnh Mobile hoàn hảo cho phần Chi tiết cây thuốc */
+
     .detail-wrapper {
-        padding: 20px 15px; /* Thu hẹp lề để nội dung không bị ép hẹp */
+        padding: 20px 15px;
         gap: 20px;
     }
 
     .detail-content h3 {
-        font-size: 1.35rem; /* Cỡ chữ tiêu đề nhỏ lại chống tràn */
+        font-size: 1.35rem;
         margin: 20px 0 10px;
     }
 
@@ -966,7 +939,7 @@ a {
     }
 
     .detail-list {
-        padding: 15px 15px 15px 25px; /* Giảm khoảng trống bên trái cho List */
+        padding: 15px 15px 15px 25px;
         margin-bottom: 15px;
     }
 
@@ -975,19 +948,24 @@ a {
         margin-bottom: 10px;
     }
 
-    /* Hoạt ảnh menu thả xuống */
     @keyframes slideDown {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
 
-/* Áp dụng cho Điện thoại màn hình quá nhỏ (iPhone SE v.v.) */
 @media screen and (max-width: 480px) {
     .logo h1 {
         font-size: 1.25rem;
     }
-    
+
     .logo i {
         font-size: 1.15rem;
     }
@@ -1004,8 +982,8 @@ a {
     .herb-img {
         height: 180px;
     }
-    
+
     .herb-grid {
-        grid-template-columns: 1fr; /* Thành 1 cột dãn hết trên phone bé */
+        grid-template-columns: 1fr;
     }
 }
